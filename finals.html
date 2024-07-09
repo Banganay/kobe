@@ -1,0 +1,909 @@
+<html>
+
+<head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/finalscss.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   
+    <style>
+        .spacing-example h6 {
+            color: white;
+            line-height: 2; 
+        }
+
+        :root {
+
+--c-dark: #212529;
+--c-brand: RED;
+--c-brand-light: #6970dd;
+--c-brand-rgb: 78, 887, 212;
+--c-body: #727272;
+--c-font-base: "ClashDisplay" , sans-serif;
+--box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.08);
+--transition: all 0.5s ease;
+
+}
+
+body {
+
+
+font-family: var(--font-base);
+line-height: 1.7;
+color: var(--c-body);
+
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,{
+font-weight: 600;
+font-color: black ;
+
+}
+
+a {
+
+text-decoration: none;
+color: var(--c-brand);
+transition var(--transition);
+
+}
+
+a:hover{
+color:var(--c-brand-light);
+}
+
+img {
+max-width: 100px;
+height: auto;
+
+}
+
+
+.home img {
+max-width: 500px;
+height: 85; 
+
+display: block; 
+margin: 0 auto; 
+}
+
+
+
+
+
+
+.section-padding {
+padding-top: 140px;
+padding-bottom: 140px;
+
+}
+
+
+.sched-padding {
+padding-top: 10px;
+padding-bottom: 10px;
+
+}
+
+
+
+.portfolio-padding {
+padding-top: auto;
+padding-bottom: auto;
+
+}
+
+/* navbar */
+
+.navbar {
+box-shadow: var(--box-shadow);
+
+}
+
+.nav-item a {
+position: relative; 
+}
+
+.nav-item a::after {
+content: '';
+position: absolute;
+left: 0;
+bottom: -6px;
+width: 100%;
+height: 3px;
+background: BLACK;
+border-radius: 5px;
+transform: scaleX(0);
+transition: .5s;
+
+
+}
+
+.nav-item a:hover::after {
+
+transform: scaleX(1);
+}
+
+
+.navbar-nav .nav-link {
+font-weight: 700;
+color: var(--c-dark);
+font-size: 16px; 
+}
+
+.navbar-nav .nav-link.active {
+color: var(--c-brand);
+
+}
+
+.btn {
+
+font-weight: 600;
+font-size: 14px;
+text-transform: uppercase;
+border-radius: 0;
+padding: 10px 24px;
+}
+
+.btn-brand {
+background-color: var(--c-brand);
+border-color: var(--c-brand);
+color: WHITE;
+
+}
+
+.btn-brand:hover{
+background-color: var(--c-brand-light);
+border-color: var(--c-brand-light);
+color: white;
+}
+
+
+
+.about-us-img {
+width: 90%;
+max-width: 90%;
+height: auto;
+display: block;
+}
+
+
+
+
+#home {
+background-image: url('https://hips.hearstapps.com/hmg-prod/images/food-1579112139.jpeg');
+            background-size: cover;
+
+}
+
+#about {
+background-image: url('https://wallpapers.com/images/hd/plain-black-desktop-lkf8asac31jppw0w.jpg');
+           
+            background-size: cover;
+
+}
+
+#reviews {
+background-color: white;
+            background-size: cover;
+
+}
+
+.section-title {
+
+margin-bottom: 60px;
+
+}
+
+.section-title .line{
+width: 60px;
+height: 4px,
+background-color:var(--c-brand;
+margin: 16px auto 24px auto;);
+
+}
+
+.section-title p{
+max-width:500px;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+#portfolio {
+position: relative;
+overflow: hidden;
+background-color: black; 
+}
+
+.carousel-item img {
+min-width: 100%; 
+min-height: 100%; 
+width: auto;
+height: auto;
+display: block;
+margin: 0 auto;
+}
+
+.carousel-inner {
+position: relative;
+width: 100%;
+overflow: hidden;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+z-index: 10;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+height: 50px; 
+width: 50px;
+}
+
+.carousel-control-prev {
+left: 20px;
+}
+
+.carousel-control-next {
+right: 20px; 
+}
+
+/* review */
+
+.new {
+
+box-sizing: borrder-box;
+margin: 0;
+padding: 0;
+
+}
+
+.reviews{
+
+display:flex;
+height: 100vh;
+
+}
+
+.rev-section{
+
+margin:auto;
+padding: 0 1rem;
+max-width: 1100px;
+text-align: center;
+
+
+}
+
+.title{
+
+font-size: 2.5rem;
+text-transform: uppecase;
+color: rgb(50, 50, 50);
+margin-bottom: .5rem;
+
+}
+
+
+.revs{
+    background-image: url('https://wallpapers.com/images/hd/plain-black-desktop-lkf8asac31jppw0w.jpg');
+           
+           background-size: cover;
+
+    padding-top: 140px;
+padding-bottom: 140px;
+}
+
+.revs h2{
+    color: red;
+}
+
+
+.revs-box{
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.revs .heading{
+    margin-bottom: 5rem;
+}
+
+.revs-box img{
+    width: 15rem;
+    border-radius: 50%;
+    border: 3px solid var(--main-color);
+    box-shadow: 0 0 2px var(--main-color)
+}
+
+.wrapper{   
+    
+ 
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+}
+
+.revs-item{
+    min-height: 500px;
+    max-width: 350px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 3px solid rgba(238, 238, 238, 0.2);
+    box-shadow: 0px 0px 20px red;
+    border-radius: 2rem;
+    margin: 0 2rem;
+    padding: 30px 60px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    color: white;
+    transition: 0.4s ease-in-out;
+}
+
+.revs-item:hover{
+    border: 3px solid var(--main-color);
+    transform: translateY(-10px)scale(1.03);
+    box-shadow: 0 0 50px var(--main-color);
+}
+
+.revs-item h2 {
+    font-size: 2.8rem;
+}
+
+.revs-item p{
+    font-size: 1.3rem;
+}
+
+#schedule {
+    font-family: 'raleway', sans-serif;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 1px;
+    background-image: url('https://wallpapers.com/images/hd/plain-black-desktop-lkf8asac31jppw0w.jpg');
+           
+            background-size: cover;
+
+}
+
+.containerss {
+    background-color: white;
+    margin: 200px;
+    box-shadow: 0px 0px 30px red;
+    display:grid;
+    grid-template-columns:40% 60%;
+    border: 4px solid black; 
+    border-radius: 20px;
+
+}
+
+.containerss-time {
+    
+    background-color: rgba(0, 0, 0, .95);
+    padding: 50px;
+   
+    outline-offset -30px;
+    text-align: center;
+
+}
+
+.headingss {
+
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.headingss-days {
+
+    color: red;
+    font-size: 30px;
+}
+
+.headingss-phone {
+
+    font-size: 20px;
+    
+}
+
+.containerss-form {
+    padding: 20px 0;
+    margin: 0 auto;
+    color: black: 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: #fff;
+}
+
+.formss {
+
+    display: grid;
+    grid-row-gap: 20px;
+}
+
+.formss-field {
+
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    padding: 7px;
+}
+
+input, select {
+    pad: 10px 15px;
+
+}
+
+.btns {
+            background-color: black;
+            color: red;
+            padding: 2px 30px; 
+            border: none;
+            font-size: 20px; 
+            border-radius: 100px;
+            width: 500px;
+         
+         
+
+        }
+
+footer {
+
+            background-color: red;
+           
+
+        }
+
+.footercontainers{
+
+            width: 100%;
+            padding: 70% 30% 20%;
+
+        }
+     
+        .specialicons {
+            display: flex;
+            justify-content: center;
+
+        }
+        
+        .specialicons a{
+            text-decoration: none;
+            padding: 10px;
+            background-color: WHITE;
+            margin: 10px;
+            border-radius: 50%;
+
+        }
+
+        .specialicons a i{
+
+font-size: 2em;
+color: RED;
+opacity: 0.9;
+
+         }
+
+         .specialicons a:hover{
+            background-color: black;
+            transition: 0.5s;
+         }
+
+         .specialicons a:hover i{
+         
+        color: white;
+        transition: 0.5s;
+
+        }
+
+.footernavss{
+
+margin: 30px 0;
+
+}
+
+.footernavss ul {
+
+display: flex;
+justify-content: center;
+
+}
+
+.footernavss ul li{
+
+color: white;
+margin: 20px;
+text-decoration: none;
+font-size: 1.3m;
+opacity: 0.7;
+transition: 0.5s;
+
+
+
+}
+
+.footernavss ul li a:hover{
+
+    opacity: 1;
+}
+
+
+.footerbottoms{
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+@media (max-width: 700px){
+.footernavss ul{
+    flex-direction: column;
+
+}
+
+.footernavss ul li {
+
+width: 100%px;
+text-align: center;
+margin: 10px;
+
+}
+
+
+
+
+
+}
+
+.rating {
+
+    color: yellow;
+}
+
+
+    </style>
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top ">
+
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://fridays.com.ph/assets/assets-tgif/img/site-logo.png">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link"  href="#home">HOME</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">ABOUT</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery">GALLERY</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#revs">REVIEWS</a>
+                        </li>
+
+                        
+
+                    </ul>
+
+                    <a href="#schedule" class="btn btn-brand ms-lg-3"> SCHEDULE </a>
+                </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-vh-100 d-flex align-items-center text-center"> 
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-uppercase text-white fw-semibold display-1"> Hi, Welcome to </h1>
+                    <a class="home" href="#">
+                        <img src="https://fridays.com.ph/assets/assets-tgif/img/site-logo.png" class="home-img">
+                    </a>
+                    <h5 class="text-white mt-3 mb-4" > ─────────────────</h5>
+                    <div>
+                        <a href="#about" class="btn btn-light me-2">Get started</a>
+                        <a href="#schedule" class="btn btn-brand ms-2">SCHEDULE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="section-title">
+                        <p>────────────── ABOUT ──────────────</p>
+                        
+                        <div class="line"></div>
+                        <img src="https://fridays.com.ph/assets/assets-tgif/img/site-logo.png" style="max-width: 200px; height: auto; display: block; margin: 0 auto;">
+                       
+                       
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://fridays.com.ph/frontend/assets/assets-tgif/img/about-left-img.jpg" alt=""
+                        class="about-us-img">
+                </div>
+                <div class="col-lg-5">
+                    <h2 class="d-flex align-items-center text-center" style="color: white;"> SOME PEOPLE SAY WE
+                        INVENTED THE GOOD TIME. </h2>
+                    <div class="d-flex justify-content-center align-items-center text-center" style="color: white;">
+                        <h2><span style="color: red;">We say, cheers!</span></h2>
+                    </div>
+                    <p>If you lived in New York city in 1965, there was always a great party at the corner of 63rd and
+                        First. Tasty American Burgers, good friends and good times. A place where every day of the week
+                        felt like Friday. And Friday nights as we know it got their start. That place was Alan
+                        Stillman’s bar, TGI Fridays™.
+
+                        Today, we still serve up your favorite American dishes right off the grill. Beer is always on
+                        tap and the drinks keep flowing. We’ve got over 931 restaurants in 60+ countries. And you’re
+                        invited to every one of them. Spend Fridays the way they were meant to be spent—enjoying good
+                        times with good friends.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---service-->
+    
+    <section id="gallery" class="portfolio-padding">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjGoWVfKcb-4YknqWBeqcR-P_lG71tNj0b09UmoyjroOTehXhrvdt01m8N4jwjf-vAKHGqhy3F7E7_FjjJAXv_2PIOGfEmCTHALzh1AFQ6YJwH_JvUVbdE7liiTQtDXk3I3d27v4Z34yIE/s1600/DSCF8623.JPG"
+                        class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://rs-menus-api.roocdn.com/images/3dcf40df-d5f5-4fdf-af1d-616b84b75589/image.jpeg"
+                        class="d-block w-100" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.summitmedia-digital.com/spotph/images/2017/07/26/tgifridays12.jpg"
+                        class="d-block w-100" alt="Slide 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://glamadelaide.com.au/wp-content/uploads/2021/11/TGI-Fridays-9.jpg"
+                        class="d-block w-100" alt="Slide 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://cdn.vox-cdn.com/thumbor/HHjlXmcYDNMvW8XFY33odYG59ZE=/0x0:4543x2870/1200x675/filters:focal(1909x1072:2635x1798)/cdn.vox-cdn.com/uploads/chorus_image/image/56969031/tgifriday_8602.0.jpg"
+                        class="d-block w-100" alt="Slide 5">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://cdn.trendhunterstatic.com/thumbs/497/fridays-feast-menu.jpeg?auto=webp"
+                        class="d-block w-100" alt="Slide 6">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://cheersonline.com/wp-content/uploads/2017/06/Tiki20Lineup20Cheers20Lifestyle20Image.jpg"
+                        class="d-block w-100" alt="Slide 7">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <section class="revs" id="revs">
+        <div class="revs-box">
+            <br>
+            <h2 class="heading" style="font-size: 25px; color: gray;">────────────── REVIEWS ──────────────</h2>
+
+            <div class="wrapper">
+                <div class="revs-item">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5cfb0f8783523500013c5639/6051988f-d8b6-41e3-bf5e-14d620fc73a1/Professional-Headshot-Vancouver?format=500w" alt="">
+                    <h2 style="font-size: 25px;">William Johnson</h2>
+                    <h6>"The ambiance at your restaurant is charming and cozy. It's a perfect place for a family dinner. The staff was attentive, ensuring a delightful experience. The grilled salmon and chocolate lava cake were delicious highlights. Will definitely recommend to friends!"</h6>
+                    
+                   
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-regular fa-star"></i>
+                      
+                    </div>
+                </div>
+
+                <div class="revs-item">
+                    <img src="https://images.squarespace-cdn.com/content/v1/55b029d3e4b022c52efdde18/1588602918207-ADILXX2TJF3LAK5MZZV3/toledo+professional+headshots-1.jpg" alt="">
+                    <h2 style="font-size: 25px;">Daniel Anderson</h2>
+                    <h6>
+                        "The food at your restaurant was exceptional! The steak was perfectly cooked, and the wine selection was impressive. The modern and elegant decor added to a fantastic dining experience. Thank you for a memorable evening!":</h6>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                        
+                    </div>
+                </div>
+
+                <div class="revs-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYoPYV54xCwyVA5oatGxPAoStsuPH4jvG_kA&s" alt="">
+                    <h2 style="font-size: 25px;">Sophia Martinez</h2>
+                    <h6>"Your restaurant offers an amazing selection of drinks! The cocktails were crafted beautifully, and the service was excellent. The cozy atmosphere made it a perfect spot for drinks with friends. Looking forward to visiting again!"</h6>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                        <i class="fa-solid fa-star"></i> 
+                  
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="sched-padding">
+        <div class="containerss">
+            <div class="containerss-time">
+                <h2 class="headingss"><i class="fa-solid fa-clock"></i> Time open</h2>
+                <br>
+                <h3 class="headingss-days"> <i class="fa-solid fa-calendar-days"></i> Monday - Friday</h3>
+                <p>7am - 11am (Breakfast)</p>
+                <p>11am - 10pm (Lunch/Dinner)</p>
+    
+                <h3 class="headingss-days"><i class="fa-solid fa-calendar-days"></i> Saturday - Sunday</h3>
+                <p>9am - 1pm (breakfast)</p>
+                <p>1am - 10pm (Lunch/Dinner)</p>
+    
+                <hr>
+    
+                <h4 class="headingss-phone">Call us: 0994-853-1508</h4>
+            </div>
+    
+            <div class="containerss-form">
+                <formss action="#">
+                    <h2 class="headingss headingss-yellow" style="color: #212529; text-align: center; font-weight: 800; ">   <i class="fa-solid fa-envelope"></i>  Reservation Online</h2>
+                    
+                    <br>
+                    
+                    <div class="formss-field" style="display: flex; align-items: center; margin-bottom: 10px;">
+                        <p style="margin: 0 10px 0 0; width: 100px; flex-shrink: 0;">Your Name:</p>
+                        <input type="text" placeholder="Your Name" style="width: 230px; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+                    
+    
+                    <div class="formss-field">
+                        <p>Your Email:</p>
+                        <input type="email" placeholder="Your Email" style="width: 230px; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+    
+                    <div class="formss-field">
+                        <p>Date:</p>
+                        <input type="date" style="width: 230px; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+    
+                    <div class="formss-field">
+                        <p>Time:</p>
+                        <input type="time" style="width: 230px; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+    
+                    <div class="formss-field">
+                        <p>how many people:</p>
+                        <select name="select" id="#" style="width: 230px; padding: 5px; border: 1px solid #ccc; border-radius: 4px; ">
+                            <option value="1">1 person</option>
+                            <option value="2">2 persons</option>
+                            <option value="3">3 persons</option>
+                            <option value="4">4 persons</option>
+                            <option value="5">5 persons</option>
+                            <option value="5+">5+ persons</option>
+                        </select>
+                    </div>
+    
+                    <div class="formss-field">
+                        <p>Branch:</p>
+                        <select name="select" id="#" style="width: 230px; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                            <option value="1">TGI Friday's MOA</option>
+                            <option value="2">TGI Friday's Trinoma</option>
+                            <option value="3">TGI Friday's Shangrila</option>
+                            <option value="4">TGI Friday's Eastwood</option>
+                            <option value="5">TGI Friday's UP Town Center</option>
+                            <option value="5">other</option>
+                        </select>
+                    </div>
+                    <br>
+                    <hr style="color: black;">
+                    <button type="submit" class="btns">Submit</button>
+                    
+                </formss>
+            </div>
+        </div>
+    </section>
+    
+           <!--footer-->
+
+
+    <footer>
+    <div class="footercontainerss">
+        <div class="specialicons">
+            <a href="https://www.facebook.com/TGIFridaysPhilippines"><i class="fa-brands fa-facebook" ></i></a>
+            <a href="https://www.instagram.com/tgifridaysph/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@tgifridaysuk" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            
+        </div>
+
+        <div class="footernavss">
+            <ul>
+                <li><a href="#home"style="color: white; font-size: 15px">HOME</a></li>
+                <li><a href="#about"style="color: white; font-size: 15px">ABOUT</a></li>
+                <li><a href="#gallery"style="color: white; font-size: 15px">GALLERY</a></li>
+                <li><a href="#revs"style="color: white; font-size: 15px">REVIEWS</a></li>
+                <li><a href="#schedule"style="color: white; font-size: 15px">SCHEDULE</a></li>
+               
+            </ul>
+
+        </div>
+
+        <div class="footerbottoms">
+            <p>Copyright &copy;2024 FOR SCHOOL PURPOSES <span class="designerss"></span> </p>
+        </div>
+
+       </div>  
+
+    </footer>
+    
+       
+    
+</body>
+
+</html>
